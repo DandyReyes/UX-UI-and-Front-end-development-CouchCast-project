@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>First_couch</title>
+	<link rel="stylesheet" href="iPhone_X___1.css">
+</head>
+
+<body>
+	<div id="iPhone_X___1">
+		<div id="Group_6">
+			<div class="navbar">
+				<ul>
+					<li class="CouchCastLogo">
+						<img src="CouchCast_Logo.svg" alt="">
+					</li>
+					<li>
+					<a id="burgerButton">
+						<img onclick="myFunction()" class="dropbtn" src="burger_button.svg" alt="">
+					</a>
+				</li>
+				</ul>
+			</div>
+			<div class="dropdown-content" id="myDropdown">
+				<a class="a" href="#" onclick="login()">login</a>
+				<a class="a" href="#" onclick="signup()">signup</a>
+			</div>
+
+			<div id="login" class="dropdown-content">
+				<input class="inLogin" type="text" placeholder="email address">
+				<input class="inLogin" type="text" placeholder="password">
+				<button class="loginSignupButton">login</button>
+				<h5>Forgot your <a href="#">password?</a></h5>
+			</div>
+			<div id="signup" class="dropdown-content">
+				<input class="inSignup" type="text" placeholder="email address">
+				<input class="inSignup" type="text" placeholder="confirm email address">
+				<input class="inSignup" type="text" placeholder="password">
+				<input class="inSignup" type="text" placeholder="confirm password">
+				<button class="loginSignupButton">signup</button>
+			</div>
+
+			<div id="Broadcast_01">
+				<img src="Main_Page-01.svg" alt="">
+			</div>
+			<div id="Search_a_game_or_bro">
+				<input type="text" name="" id="inputBox" placeholder="Search a game or broadcaster to listen to!">
+			</div>
+			<svg class="Line_1">
+				<path id="Line_1" d="M 0 1 L 327.4664001464844 0">
+				</path>
+			</svg>
+		</div>
+		<div id="Symbol_1___1">
+		</div>
+		<button id="btn">Search</button>
+	</div>
+
+	<script>
+		function myFunction() {
+			document.getElementById("myDropdown").classList.toggle("show");
+		}
+		function login() {
+			document.getElementById("login").classList.toggle("show");
+		}
+		function signup() {
+			document.getElementById("signup").classList.toggle("show");
+		}
+
+		// Close the dropdown if the user clicks outside of it
+		window.onclick = function (e) {
+			if (!e.target.matches('.dropbtn')) {
+				var myDropdown = document.getElementById("myDropdown");
+				/*var loginDropdown = document.getElementById("login");
+				var signupDropdown = document.getElementById("signup");*/
+				if (myDropdown.classList.contains('show')) {
+					myDropdown.classList.remove('show');
+				} /*else if (loginDropdown.classList.contains('show')) {
+					loginDropdown.classList.remove('show');
+				} else if (signupDropdown.classList.contains('show')) {
+					signupDropdown.classList.remove('show');
+				}*/
+			}
+		}
+
+	</script>
+</body>
+
+</html>
